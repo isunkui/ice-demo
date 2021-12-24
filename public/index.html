@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge,chrome=1" />
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no"
+  />
+  <meta name="format-detection" content="telephone=no" />
+  <meta http-equiv="Pragma" content="no-cache" />
+  <meta http-equiv="Cache-Control" content="no-cache" />
+  <meta http-equiv="Expires" content="0" />
+  <title> </title>
+  <style>
+  body {
+    position: relative;
+  }
+  #pageLoadingContainer {
+    position: fixed;
+    z-index: 9999;
+    width: 100%;
+    height: 100%;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    background: #fff;
+  }
+  @-webkit-keyframes line-scale-pulse-out {
+    0% {
+      -webkit-transform: scaley(1);
+      transform: scaley(1);
+    }
+    50% {
+      -webkit-transform: scaley(0.4);
+      transform: scaley(0.4);
+    }
+    100% {
+      -webkit-transform: scaley(1);
+      transform: scaley(1);
+    }
+  }
+
+  @keyframes line-scale-pulse-out {
+    0% {
+      -webkit-transform: scaley(1);
+      transform: scaley(1);
+    }
+    50% {
+      -webkit-transform: scaley(0.4);
+      transform: scaley(0.4);
+    }
+    100% {
+      -webkit-transform: scaley(1);
+      transform: scaley(1);
+    }
+  }
+  .line-scale-pulse-out > div {
+    background: #22d5a3;
+    background: linear-gradient(151deg, #5ce693 0%, #04ccab 100%);
+    background: -webkit-linear-gradient(151deg, #5ce693 0%, #04ccab 100%);
+    width: 4px;
+    height: 35px;
+    border-radius: 2px;
+    margin: 2px;
+    -webkit-animation-fill-mode: both;
+    animation-fill-mode: both;
+    display: inline-block;
+    -webkit-animation: line-scale-pulse-out 0.9s -0.6s infinite cubic-bezier(0.85, 0.25, 0.37, 0.85);
+    animation: line-scale-pulse-out 0.9s -0.6s infinite cubic-bezier(0.85, 0.25, 0.37, 0.85);
+  }
+  .line-scale-pulse-out > div:nth-child(2),
+  .line-scale-pulse-out > div:nth-child(4) {
+    -webkit-animation-delay: -0.4s !important;
+    animation-delay: -0.4s !important;
+  }
+  .line-scale-pulse-out > div:nth-child(1),
+  .line-scale-pulse-out > div:nth-child(5) {
+    -webkit-animation-delay: -0.2s !important;
+    animation-delay: -0.2s !important;
+  }
+  </style>
+</head>
+<body>
+
+<div id="ice-container"></div>
+<!--    <script src="https://cdn.bootcss.com/babel-polyfill/7.6.0/polyfill.min.js"></script>-->
+<script src="https://cdn.bootcdn.net/ajax/libs/react/17.0.2/umd/react.production.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/react-dom/17.0.2/umd/react-dom.production.min.js"></script>
+<script src="https://cdn.bootcdn.net/ajax/libs/react-is/17.0.2/umd/react-is.production.min.js"></script>
+</body>
+</html>
